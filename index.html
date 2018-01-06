@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Device</title>
+  <title>Интернет-магазин Device</title>
   <link href="css/normalize.css" rel="stylesheet">
 
 </head>
@@ -28,7 +28,18 @@
             </div>
           </li>
           <li class="navigation-header__item">
-            <a class="navigation-header__link" href="#">Войти</a>
+            <section class="account">
+              <div class="account-username account-username--unknown">
+                <a class="account__link" href="#">Войти</a>
+              </div>
+
+              <div class="account-username account-username--verified">
+                <div class="account__username">
+                  <a class="account__user-profile" href="#" title="Профиль пользователя">Валентин Петухов</a>
+                  <a class="account__logout" href="#" title="Выйти">Выйти</a>
+                </div>
+              </div>
+            </section>
           </li>
           <li class="navigation-header__item">
             <a class="navigation-header__link" href="#">Сравнить</a>
@@ -40,7 +51,7 @@
 
         <ul class="navigation">
           <li class="navigation__item navigation__item--drop">
-            <!--Развернутый списко -->
+            <!--Развернутый список -->
             <a class="navigation__link" href="#">Каталог товаров</a>
             <ul>
               <li>
@@ -280,7 +291,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__row site-footer__row--top">
-        <div class="site-header__logo">
+        <div class="site-footer__logo">
           <a href="#">Device</a>
         </div>
 
@@ -347,6 +358,47 @@
       </div>
     </div>
   </footer>
+
+  <section class="popup popup--form">
+
+    <h2 class="visually-hidden">Заполните форму для обратной связи</h2>
+
+    <button class="popup__close popup__close--form" type="button" title="Закрыть">Закрыть</button>
+
+    <form class="popup__form" action="https://echo.htmlacademy.ru/ " method="get">
+      <div class="container">
+
+        <ul class="popup__list">
+
+          <li class="popup__item">
+            <label class="popup__label " for="popup-name">Ваше имя: </label>
+            <input class="popup__input " type="text" name="popup-name" id="popup-name" placeholder="Представьтесь, пожалуйста">
+          </li>
+
+          <li class="popup__item">
+            <label class="popup__label " for="popup-mail">Ваш e-mail:</label>
+            <input class="popup__input " type="email" name="popup-mail" id="popup-mail" placeholder="Для отправки ответа">
+          </li>
+
+          <li class="popup__item popup__item--textarea">
+            <label class="popup__label" for="popup-feedback">Текст письма:</label>
+            <textarea class="popup__textarea" name="popup-feedback" id='popup-feedback' placeholder="В свободной форме"></textarea>
+          </li>
+
+        </ul>
+
+        <button class="btn-base popup__btn" type="submit">Отправить</button>
+
+      </div>
+
+    </form>
+  </section>
+
+  <section class="modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <p> <img src="http://via.placeholder.com/75x75" alt='Карта проезда'></p>
+    <button class="modal-map__close" type="button" title="Закрыть">Закрыть</button>
+  </section>
 
 </body>
 
