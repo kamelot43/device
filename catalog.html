@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Device. моноподы для селфи</title>
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -29,14 +30,14 @@
           <li class="navigation-header__item">
             <section class="account">
               <h2 class="visually-hidden">Вход в аккаунт</h2>
-              <div class="account-username account-username--unknown">
+              <div class="account-username account-username--unknown disable">
                 <a class="account__link" href="#">Войти</a>
               </div>
 
               <div class="account-username account-username--verified">
                 <div class="account__username">
-                  <a class="account__user-profile" href="#" title="Профиль пользователя">Валентин Петухов</a>
-                  <a class="account__logout" href="#" title="Выйти">Выйти</a>
+                  <a class="account__user-profile navigation-header__link" href="#" title="Профиль пользователя">Валентин Петухов</a>
+                  <a class="account__logout navigation-header__link" href="#" title="Выйти">Выйти</a>
                 </div>
               </div>
             </section>
@@ -50,10 +51,6 @@
         </ul>
 
         <ul class="navigation">
-          <li class="navigation__item navigation__item--drop">
-            <!--Развернутый список -->
-            <a class="navigation__link" href="#">Каталог товаров</a>
-            <ul>
               <li class="navigation__item navigation__item--drop">
                 <!--Развернутый список -->
                 <a class="navigation__link" href="#">Каталог товаров</a>
@@ -205,7 +202,7 @@
 
           </fieldset>
 
-          <button class="btn-empty  filter__btn">Показать</button>
+          <button class="button-base  filter__btn" type="submit">Показать</button>
         </form>
       </section>
 
@@ -250,8 +247,8 @@
             <article class="product">
               <h2 class="visually-hidden">Товары : Любительская селфи-палка</h2>
               <div class="product__action">
-                <a href="#" class="btn-product btn-product--buy">В корзину</a>
-                <a href="#" class="btn-product btn-product--bookmark">Добавить к сравнению</a>
+                <a href="#" class="button-base">В корзину</a>
+                <a href="#" class="product__bookmark">Добавить к сравнению</a>
               </div>
                       <img src="img/item-1.jpg" width="360" height="380" alt ='Любительская селфи-палка'>
               </div>
@@ -266,8 +263,8 @@
             <article class="product">
               <h2 class="visually-hidden">Товары : Профессиональнапя селфи-палка</h2>
               <div class="product__action">
-                <a href="#" class="btn-product btn-product--buy">В корзину</a>
-                <a href="#" class="btn-product btn-product--bookmark">Добавить к сравнению</a>
+                <a href="#" class="button-base">В корзину</a>
+                <a href="#" class="product__bookmark">Добавить к сравнению</a>
               </div>
                     <img src="img/item-2.jpg" width="360" height="380" alt ='Профессиональнапя селфи-палка'>
               </div>
@@ -282,8 +279,8 @@
             <article class="product">
               <h2 class="visually-hidden">Товары : Непотопляемая селфи-палка</h2>
               <div class="product__action">
-                <a href="#" class="btn-product btn-product--buy">В корзину</a>
-                <a href="#" class="btn-product btn-product--bookmark">Добавить к сравнению</a>
+                <a href="#" class="button-base">В корзину</a>
+                <a href="#" class="product__bookmark">Добавить к сравнению</a>
               </div>
 
                     <img src="img/item-3.jpg" width="360" height="380" alt ='Непотопляемая селфи-палка'>
@@ -291,7 +288,7 @@
               </div>
 
               <div class="product__inner">
-                <aclass="product__descr" href="#">Непотопляемая селфи-палка</a>
+                <a class="product__descr" href="#">Непотопляемая селфи-палка</a>
                 <div class="product__price">2500 руб.</div>
               </div>
 
@@ -300,8 +297,8 @@
             <article class="product">
               <h2 class="visually-hidden">Товары : Селфи-палка "Следуй за мной"</h2>
               <div class="product__action">
-                <a href="#" class="btn-product btn-product--buy">В корзину</a>
-                <a href="#" class="btn-product btn-product--bookmark">Добавить к сравнению</a>
+                <a href="#" class="button-base">В корзину</a>
+                <a href="#" class="product__bookmark">Добавить к сравнению</a>
               </div>
 
                       <img src="img/item-4.jpg" width="360" height="380" alt ='Селфи-палка "Следуй за мной"'>
