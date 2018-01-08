@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Интернет-магазин Device</title>
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -30,10 +31,10 @@
           <li class="navigation-header__item">
             <section class="account">
               <div class="account-username account-username--unknown">
-                <a class="account__link" href="#">Войти</a>
+                <a class="account__link navigation-header__link" href="#">Войти</a>
               </div>
 
-              <div class="account-username account-username--verified">
+              <div class="account-username account-username--verified disable">
                 <div class="account__username">
                   <a class="account__user-profile" href="#" title="Профиль пользователя">Валентин Петухов</a>
                   <a class="account__logout" href="#" title="Выйти">Выйти</a>
@@ -125,14 +126,14 @@
           <table class="slider__table">
             <tbody>
               <tr>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
+                <td class="slider__td-custom">8,5 м</td>
+                <td class="slider__td-custom">5 кг</td>
+                <td class="slider__td-custom">Карбон</td>
               </tr>
               <tr>
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
+                <td class="slider__td">Длина палки</td>
+                <td class="slider__td">Вес палки</td>
+                <td class="slider__td">Материал</td>
               </tr>
             </tbody>
           </table>
@@ -145,10 +146,10 @@
           <table class="slider__table">
             <tbody>
               <tr>
-                <td>48 часов</td>
+                <td class="slider__td-custom">48 часов</td>
               </tr>
               <tr>
-                <td>Без подзарядки</td>
+                <td class="slider__td">Без подзарядки</td>
               </tr>
             </tbody>
           </table>
@@ -161,12 +162,12 @@
           <table class="slider__table">
             <tbody>
               <tr>
-                <td>800 м</td>
-                <td>50 м</td>
+                <td class="slider__td-custom">800 м</td>
+                <td class="slider__td-custom">50 м</td>
               </tr>
               <tr>
-                <td>Дальность полета</td>
-                <td>Радиус поражения</td>
+                <td class="slider__td">Дальность полета</td>
+                <td class="slider__td">Радиус поражения</td>
               </tr>
             </tbody>
           </table>
@@ -180,22 +181,22 @@
       <div class="container">
         <ul class="goods__list">
           <li class="goods__item">
-            <a class="goods__link">Виртуальная реальность</a>
+            <a class="goods__link" href="#">Виртуальная реальность</a>
           </li>
           <li class="goods__item">
-            <a class="goods__link">Монопады для селфи</a>
+            <a class="goods__link" href="catalog.html">Монопады для селфи</a>
           </li>
           <li class="goods__item">
-            <a class="goods__link">Экшн-камеры</a>
+            <a class="goods__link" href="#">Экшн-камеры</a>
           </li>
           <li class="goods__item">
-            <a class="goods__link">Фитнес-браслеты</a>
+            <a class="goods__link" href="#">Фитнес-браслеты</a>
           </li>
           <li class="goods__item">
-            <a class="goods__link">Умные часы</a>
+            <a class="goods__link" href="#">Умные часы</a>
           </li>
           <li class="goods__item">
-            <a class="goods__link">Квадрокоптеры</a>
+            <a class="goods__link" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </div>
@@ -207,7 +208,7 @@
         <section class="slider-custom services__slider">
 
           <input type="radio" class="visually-hidden" id='param_1' name='tabs' checked>
-          <input type="radio" class="visually-hidden" id='param_2' name='tabs'>
+          <input type="radio" class="visually-hidden" id='param_2' name='tabs' >
           <input type="radio" class="visually-hidden" id='param_3' name='tabs'>
 
           <div class="slider-custom__content">
@@ -284,7 +285,7 @@
             <li class="delivery__item">ЖелДорЭкспедиция</li>
           </ul>
 
-          <a class="btn-base delivery__btn" href="#">Подробнее о нас</a>
+          <a class="button-base delivery__btn" href="#">Подробнее о нас</a>
         </div>
 
         <div class="delivery__contacts">
@@ -294,7 +295,7 @@
           <a class="delivery__map" href="#">
               <img src="img/map_sm.jpg" width="560" height="222" alt ='карта проезда'>
           </a>
-          <a class="btn-base delivery__btn" href="#">Напишите нам</a>
+          <a class="button-base delivery__btn" href="#">Напишите нам</a>
         </div>
       </div>
     </section>
