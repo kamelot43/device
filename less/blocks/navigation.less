@@ -1,0 +1,47 @@
+.navigation {
+  .list();
+  display: flex;
+}
+
+.navigation__list-drop {
+  width: 555px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 40px;
+  outline: 2px solid green;
+}
+
+
+.navigation__link {
+  display: block;
+  min-width: 120px;
+  .title-base();
+  outline: 2px solid red;
+  letter-spacing: .2em;
+}
+
+.navigation__item--delivery {
+  margin-right: 35px;
+}
+
+.navigation__item--contacts {
+  margin-left: auto;
+}
+
+.navigation__item > ul a {
+  line-height: 36px;
+  color: inherit;
+}
+
+.navigation__item ul {
+  .list();
+}
+
+
+.navigation__item--drop {
+  position: relative;
+  width: 240px;
+  outline: 2px solid orange;
+  padding-right: 300px;
+}

@@ -7,19 +7,30 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
+  <!--<style>
+  HTML {
+    background: url( 'img/1.png' ) 50% 0 no-repeat;
+  }
+
+  BODY {
+    opacity: .5;
+  }
+</style>-->
+
 </head>
 
 <body>
   <header class="site-header">
     <h1 class="visually-hidden">Магазин гаджетов "Девайс"</h1>
     <div class="container">
+      <div class="site-header__wrapper">
       <nav class="site-nav">
         <h2 class="visually-hidden">Навигация по сайту</h2>
         <div class="site-header__logo">
           <a href="#">Device</a>
         </div>
         <ul class="navigation-header">
-          <li class="navigation-header__item">
+          <li class="navigation-header__item navigation-header__item--search">
             <div class="search">
               <form class="search__form " action="https://echo.htmlacademy.ru" method="post">
                 <label class="search__label visually-hidden" for="search">Форма поиска</label>
@@ -42,7 +53,7 @@
               </div>
             </section>
           </li>
-          <li class="navigation-header__item">
+          <li class="navigation-header__item navigation-header__item--compare">
             <a class="navigation-header__link" href="#">Сравнить</a>
           </li>
           <li class="navigation-header__item">
@@ -54,7 +65,7 @@
           <li class="navigation__item navigation__item--drop">
             <!--Развернутый список -->
             <a class="navigation__link" href="#">Каталог товаров</a>
-            <ul>
+            <ul class="navigation__list-drop">
               <li>
                 <!-- Первый уровень-->
                 <ul>
@@ -86,26 +97,28 @@
             </ul>
           </li>
 
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--delivery">
             <a class="navigation__link" href="#">Доставка</a>
           </li>
 
-          <li class="navigation__item">
+          <li class="navigation__item ">
             <a class="navigation__link" href="#">Гарантия</a>
           </li>
 
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--contacts">
             <a class="navigation__link" href="#">Контакты</a>
           </li>
 
         </ul>
       </nav>
     </div>
+    </div>
 
   </header>
 
   <main class="site-main">
     <section class="slider">
+      <div class="container">
       <h2 class="visually-hidden">Слайдер</h2>
 
       <input class="visually-hidden" type="radio" id='btn_1' name='toggle' checked>
@@ -113,14 +126,15 @@
       <input class="visually-hidden" type="radio" id='btn_3' name='toggle'>
 
       <div class="slider__toggles">
-        <label class="slider__toggle slider__toggle-prev" for="btn_1">Страница №1</label>
+        <label class="slider__toggle slider__toggle-prev " for="btn_1">Страница №1</label>
         <label class="slider__toggle slider__toggle--next" for="btn_2">Страница №2</label>
         <label class="slider__toggle slider__toggle--next" for="btn_3">Страница №3</label>
       </div>
 
       <div class="slider__slides">
         <div class="slider__slide" id="slide-1">
-          <p class="slider__slogan">Делай селфи , как Бен Стиллер !</p>
+          <div class="slider__content">
+          <p class="slider__slogan">Делай селфи ,<br> как Бен Стиллер !</p>
           <p class="slider__descr">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="button-base slider__btn" href="#">Подробнее</a>
           <table class="slider__table">
@@ -138,8 +152,10 @@
             </tbody>
           </table>
         </div>
+        </div>
 
         <div class="slider__slide" id="slide-2">
+            <div class="slider__content">
           <p class="slider__slogan">Худеем правильно!</p>
           <p class="slider__descr">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="button-base slider__btn" href="#">Подробнее</a>
@@ -154,8 +170,10 @@
             </tbody>
           </table>
         </div>
+        </div>
 
         <div class="slider__slide" id="slide-3">
+            <div class="slider__content">
           <p class="slider__slogan">Порхает как бабочка, жалит как пчела!</p>
           <p class="slider__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="button-base slider__btn" href="#">Подробнее</a>
@@ -173,6 +191,8 @@
           </table>
         </div>
       </div>
+      </div>
+    </div>
 
     </section>
 
@@ -184,7 +204,7 @@
             <a class="goods__link" href="#">Виртуальная реальность</a>
           </li>
           <li class="goods__item">
-            <a class="goods__link" href="catalog.html">Монопады для селфи</a>
+            <a class="goods__link" href="catalog.html">Монопады <br>для селфи</a>
           </li>
           <li class="goods__item">
             <a class="goods__link" href="#">Экшн-камеры</a>
@@ -235,12 +255,12 @@
               <p class="slider-custom__descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
             </div>
 
-            <div class="slider-custom__slide " id="custom-slide_2">
+            <div class="slider-custom__slide disable" id="custom-slide_2">
               <h3 class="slider-custom__title">Гарантия</h3>
               <p class="slider-custom__descr">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же. </p>
             </div>
 
-            <div class="slider-custom__slide " id="custom-slide_3">
+            <div class="slider-custom__slide disable" id="custom-slide_3">
               <h3 class="slider-custom__title">Кредит</h3>
               <p class="slider-custom__descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
