@@ -4,12 +4,21 @@
 }
 
 .navigation__list-drop {
-  width: 555px;
+  width: 1040px;
+  height: 145px;
+  //width: 555px;
   position: absolute;
-  display: flex;
-  justify-content: space-between;
+  //display: flex;
+  justify-content: flex-start;
   top: 40px;
   outline: 2px solid green;
+  background-color: #f7e296;
+  z-index: 1;
+}
+
+.navigation__list-drop li {
+  width: 200px;
+  margin-right: 20px;
 }
 
 
@@ -19,6 +28,7 @@
   .title-base();
   outline: 2px solid red;
   letter-spacing: .2em;
+  text-transform: uppercase;
 }
 
 .navigation__item--delivery {
