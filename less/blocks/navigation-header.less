@@ -5,8 +5,44 @@
 }
 
 .navigation-header__link {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 100px;
+  padding-top: 10px;
+  text-align: right;
+  box-sizing: border-box;
   line-height: 36px;
   color: inherit;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 5px;
+    width: 12px;
+    height: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--enter {
+    text-align: center;
+  }
+
+  &--enter::before {
+    background-image: url("../img/user.svg");
+  }
+
+  &--compare::before {
+    left: 5px;
+    background-image: url("../img/compare.svg");
+  }
+
+  &--cart::before {
+    left: 12px;
+    background-image: url("../img/cart.svg");
+  }
 }
 
 .navigation-header__item--compare {
@@ -16,14 +52,4 @@
 
 .navigation-header__item--search {
   padding-right: 100px;
-}
-
-.navigation-header__link {
-  display: block;
-  padding-top: 10px;
-  height: 40px;
-  width: 100px;
-  text-align: right;
-  box-sizing: border-box;
-  outline: 2px solid blue;
 }

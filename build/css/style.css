@@ -617,8 +617,40 @@ body {
   margin-bottom: 45px;
 }
 .navigation-header__link {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 100px;
+  padding-top: 10px;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 36px;
   color: inherit;
+}
+.navigation-header__link::before {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  width: 12px;
+  height: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.navigation-header__link--enter {
+  text-align: center;
+}
+.navigation-header__link--enter::before {
+  background-image: url("../img/user.svg");
+}
+.navigation-header__link--compare::before {
+  left: 5px;
+  background-image: url("../img/compare.svg");
+}
+.navigation-header__link--cart::before {
+  left: 12px;
+  background-image: url("../img/cart.svg");
 }
 .navigation-header__item--compare {
   margin-left: auto;
@@ -626,16 +658,6 @@ body {
 }
 .navigation-header__item--search {
   padding-right: 100px;
-}
-.navigation-header__link {
-  display: block;
-  padding-top: 10px;
-  height: 40px;
-  width: 100px;
-  text-align: right;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: 2px solid blue;
 }
 .navigation {
   list-style: none;
@@ -860,7 +882,10 @@ body {
   margin-top: -115px;
   margin-bottom: 115px;
 }
-.slider__slide:not(:first-child) {
+.slider .container {
+  position: relative;
+}
+.slider__slide:not(:nth-child(3)) {
   display: none;
 }
 .slider__table {
@@ -873,8 +898,8 @@ body {
   width: 480px;
 }
 .slider__slide {
+  display: none;
   position: relative;
-  outline: 2px solid orange;
 }
 .slider__rows {
   display: -webkit-box;
@@ -886,11 +911,9 @@ body {
 }
 .slider__right-row {
   position: relative;
-  width: 500px;
-  outline: 2px solid pink;
+  width: 505px;
 }
 .slider__right-row::before {
-  content: '01';
   position: absolute;
   right: 0;
   top: -10px;
@@ -900,8 +923,17 @@ body {
   font-size: 179.2px;
   color: #fff;
 }
+.slider__right-row--slide-1::before {
+  content: "01";
+}
+.slider__right-row--slide-2::before {
+  content: "02";
+}
+.slider__right-row--slide-3::before {
+  content: "03";
+}
 .slider__right-row::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50px;
@@ -917,11 +949,46 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  outline: 2px solid red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider__toggles {
+  position: absolute;
+  top: 330px;
+  right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80px;
+  z-index: 1;
 }
 .slider__toggle {
-  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/slider-button-empty.svg");
+  background-size: 12px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
   font-size: 0;
+  cursor: pointer;
+}
+#btn_1:checked ~ .slider__toggles label[for="btn_1"],
+#btn_2:checked ~ .slider__toggles label[for="btn_2"],
+#btn_3:checked ~ .slider__toggles label[for="btn_3"] {
+  background-image: url("../img/slider-button.svg");
+  background-size: 12px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#btn_1:checked ~ .slider__slides #slide-1,
+#btn_2:checked ~ .slider__slides #slide-2,
+#btn_3:checked ~ .slider__slides #slide-3 {
+  display: block;
 }
 .slider .container {
   width: 1040px;
@@ -931,12 +998,16 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  min-height: 100px;
   margin-bottom: 25px;
   padding-top: 90px;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 50px;
   font-weight: 800;
+}
+.slider__slogan span {
+  position: absolute;
 }
 .slider__td {
   font-family: "Open Sans", Arial, sans-serif;
@@ -951,6 +1022,9 @@ body {
   font-weight: 300;
   padding-right: 73px;
   padding-bottom: 8px;
+}
+.slider__td-custom--short {
+  padding-right: 55px;
 }
 .social__list {
   list-style: none;

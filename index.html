@@ -7,16 +7,6 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
-  <!--<style>
-  HTML {
-    background: url( 'img/1.png' ) 50% 0 no-repeat;
-  }
-
-  BODY {
-    opacity: .5;
-  }
-</style>-->
-
 </head>
 
 <body>
@@ -42,7 +32,7 @@
           <li class="navigation-header__item">
             <section class="account">
               <div class="account-username account-username--unknown">
-                <a class="account__link navigation-header__link" href="#">Войти</a>
+                <a class="account__link navigation-header__link navigation-header__link--enter" href="#">Войти</a>
               </div>
 
               <div class="account-username account-username--verified disable">
@@ -54,10 +44,10 @@
             </section>
           </li>
           <li class="navigation-header__item navigation-header__item--compare">
-            <a class="navigation-header__link" href="#">Сравнить</a>
+            <a class="navigation-header__link navigation-header__link--compare" href="#">Сравнить</a>
           </li>
           <li class="navigation-header__item">
-            <a class="navigation-header__link" href="#">Корзина</a>
+            <a class="navigation-header__link navigation-header__link--cart" href="#">Корзина</a>
           </li>
         </ul>
 
@@ -121,23 +111,23 @@
       <div class="container">
       <h2 class="visually-hidden">Слайдер</h2>
 
-      <input class="visually-hidden" type="radio" id='btn_1' name='toggle' checked>
-      <input class="visually-hidden" type="radio" id='btn_2' name='toggle'>
+      <input class="visually-hidden" type="radio" id='btn_1' name='toggle'>
+      <input class="visually-hidden" type="radio" id='btn_2' name='toggle' checked>
       <input class="visually-hidden" type="radio" id='btn_3' name='toggle'>
 
       <div class="slider__toggles">
-        <label class="slider__toggle slider__toggle-prev " for="btn_1">Страница №1</label>
-        <label class="slider__toggle slider__toggle--next" for="btn_2">Страница №2</label>
-        <label class="slider__toggle slider__toggle--next" for="btn_3">Страница №3</label>
+        <label class="slider__toggle " for="btn_1">Страница №1</label>
+        <label class="slider__toggle " for="btn_2">Страница №2</label>
+        <label class="slider__toggle " for="btn_3">Страница №3</label>
       </div>
 
       <div class="slider__slides">
         <div class="slider__slide" id="slide-1">
           <div class="slider__rows">
             <div class="slider__left-row">
-              <img src="img/slider-1.png" alt="селфи-палка" class="slider__picture">
+              <img src="img/slider-1.png" width="384" height="486" alt="селфи-палка" class="slider__picture">
             </div>
-            <div class="slider__right-row">
+            <div class="slider__right-row slider__right-row--slide-1">
               <p class="slider__slogan">Делай селфи ,<br> как Бен Стиллер !</p>
               <p class="slider__descr">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <a class="button-base slider__btn" href="#">Подробнее</a>
@@ -162,7 +152,12 @@
 
         <div class="slider__slide" id="slide-2">
             <div class="slider__content">
-          <p class="slider__slogan">Худеем правильно!</p>
+                <div class="slider__rows">
+                  <div class="slider__left-row">
+                    <img src="img/slider-2.png" width="345" height="485" alt="фитнес-браслет" class="slider__picture">
+                  </div>
+                    <div class="slider__right-row slider__right-row--slide-2">
+          <p class="slider__slogan">Худеем <br>правильно!</p>
           <p class="slider__descr">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="button-base slider__btn" href="#">Подробнее</a>
           <table class="slider__table">
@@ -177,17 +172,24 @@
           </table>
         </div>
         </div>
+        </div>
+      </div>
 
         <div class="slider__slide" id="slide-3">
             <div class="slider__content">
-          <p class="slider__slogan">Порхает как бабочка, жалит как пчела!</p>
-          <p class="slider__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                <div class="slider__rows">
+                  <div class="slider__left-row">
+                    <img src="img/slider-3.png" alt="квадрокоптер" width="526" height="334" class="slider__picture">
+                  </div>
+                    <div class="slider__right-row slider__right-row--slide-3">
+          <p class="slider__slogan"><span>Порхает как бабочка, жалит как пчела!</span></p>
+          <p class="slider__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен <br> мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="button-base slider__btn" href="#">Подробнее</a>
           <table class="slider__table">
             <tbody>
               <tr>
-                <td class="slider__td-custom">800 м</td>
-                <td class="slider__td-custom">50 м</td>
+                <td class="slider__td-custom slider__td-custom--short">800 м</td>
+                <td class="slider__td-custom slider__td-custom--short">50 м</td>
               </tr>
               <tr>
                 <td class="slider__td">Дальность полета</td>
@@ -196,7 +198,9 @@
             </tbody>
           </table>
         </div>
+        </div>
       </div>
+    </div>
       </div>
     </div>
 

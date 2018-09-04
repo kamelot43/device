@@ -4,7 +4,11 @@
   margin-bottom: 115px;
 }
 
-.slider__slide:not(:first-child) {
+.slider .container {
+  position: relative;
+}
+
+.slider__slide:not(:nth-child(3)) {
   display: none;
 }
 
@@ -20,8 +24,8 @@
 }
 
 .slider__slide {
+  display: none;
   position: relative;
-  outline: 2px solid orange;
 }
 
 .slider__rows {
@@ -31,11 +35,9 @@
 
 .slider__right-row {
   position: relative;
-  width: 500px;
-  outline: 2px solid pink;
+  width: 505px;
 
   &::before {
-    content: '01';
     position: absolute;
     right: 0;
     top: -10px;
@@ -46,8 +48,20 @@
     color: #fff;
   }
 
+  &--slide-1::before {
+    content: "01";
+  }
+
+  &--slide-2::before {
+    content: "02";
+  }
+
+  &--slide-3::before {
+    content: "03";
+  }
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 50px;
@@ -61,11 +75,44 @@
   width: 450px;
   display: flex;
   justify-content: center;
-  outline: 2px solid red;
+  align-items: center;
 }
-.slider__toggle {
+
+.slider__toggles {
   position: absolute;
+  top: 330px;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  z-index: 1;
+}
+
+.slider__toggle {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/slider-button-empty.svg");
+  background-size: 12px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
   font-size: 0;
+  cursor: pointer;
+}
+
+#btn_1:checked ~ .slider__toggles label[for="btn_1"],
+#btn_2:checked ~ .slider__toggles label[for="btn_2"],
+#btn_3:checked ~ .slider__toggles label[for="btn_3"] {
+  background-image: url("../img/slider-button.svg");
+  background-size: 12px 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#btn_1:checked ~ .slider__slides #slide-1,
+#btn_2:checked ~ .slider__slides #slide-2,
+#btn_3:checked ~ .slider__slides #slide-3 {
+  display: block;
 }
 
 .slider .container {
@@ -75,12 +122,17 @@
 
 .slider__slogan {
   .list();
+  min-height: 100px;
   margin-bottom: 25px;
   padding-top: 90px;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 50px;
   font-weight: 800;
+}
+
+.slider__slogan span {
+  position: absolute;
 }
 
 .slider__td {
@@ -97,4 +149,8 @@
   font-weight: 300;
   padding-right: 73px;
   padding-bottom: 8px;
+
+  &--short {
+    padding-right: 55px;
+  }
 }
