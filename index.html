@@ -23,8 +23,8 @@
           <li class="navigation-header__item navigation-header__item--search">
             <div class="search">
               <form class="search__form " action="https://echo.htmlacademy.ru" method="post">
-                <label class="search__label visually-hidden" for="search">Форма поиска</label>
-                <input class="search__input" type="search" id="search" placeholder="Поиск по сайту">
+                <label class="search__label" for="search">Форма поиска</label>
+                <input class="search__input" type="search" id="search" placeholder="Поиск по сайту" required >
                 <button class="search__btn" type="submit">Найти</button>
               </form>
             </div>
@@ -54,35 +54,35 @@
         <ul class="navigation">
           <li class="navigation__item navigation__item--drop ">
             <!--Развернутый список -->
-            <a class="navigation__link" href="#">Каталог товаров</a>
-            <ul class="navigation__list-drop disable">
-              <li>
+            <a class="navigation__link navigation__link--catalog" href="#">Каталог товаров</a>
+            <ul class="navigation__list-drop drop-down-list">
+              <li class="drop-down-list__item">
                 <!-- Первый уровень-->
                 <ul>
                   <li>
-                    <a href="#">Виртуальная реальность</a>
+                    <a class="drop-down-list__link" href="#">Виртуальная реальность</a>
                   </li>
                   <li>
-                    <a href="catalog.html">Монопады для селфи</a>
+                    <a class="drop-down-list__link" href="catalog.html">Монопады для селфи</a>
                   </li>
                   <li>
-                    <a href="#">Экшн-камеры</a>
+                    <a class="drop-down-list__link" href="#">Экшн-камеры</a>
                   </li>
                 </ul>
               </li>
-              <li>
+              <li class="drop-down-list__item">
                 <!-- Второй уровень-->
                 <ul>
                   <li>
-                    <a href="#">Фитнес-браслеты</a>
+                    <a class="drop-down-list__link" href="#">Фитнес-браслеты</a>
                   </li>
                   <li>
-                    <a href="#">Умные часы</a>
+                    <a class="drop-down-list__link" href="#">Умные часы</a>
                   </li>
                 </ul>
               </li>
-              <li>
-                <a href="#">Квадрокоптеры</a>
+              <li class="drop-down-list__item">
+                <a class="drop-down-list__link" href="#">Квадрокоптеры</a>
               </li>
             </ul>
           </li>
